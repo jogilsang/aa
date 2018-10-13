@@ -5,7 +5,6 @@ Image
 =============
 
 ![Alt text](/network/packetTracer/[ACL]/1.png)
-![Alt text](/network/packetTracer/[Etherchenel]/스위치액세스-이더채널/3.png)
 ![Alt text](/network/packetTracer/[VPN]/[Site-to-Site-router]/11.png)
 ![Alt text](/network/packetTracer/[VPN]/[Remote-Access-router]/busan7.png)
 ![Alt text](/network/packetTracer/[tacacs]/tacacs_image.png)
