@@ -4,7 +4,7 @@
 Image
 =============
 
-![Alt text](/packetTracer/[ACL]/1.png)
+![Alt text](/network/packetTracer/[ACL]/1.png)
 ![Alt text](/pingProgram/8.png)
 ![Alt text](/pingProgram/10.png)
 ![Alt text](/pingProgram/11.png)
