@@ -5,13 +5,10 @@ Image
 =============
 
 ![Alt text](/network/packetTracer/[ACL]/1.png)
-![Alt text](/pingProgram/8.png)
-![Alt text](/pingProgram/10.png)
-![Alt text](/pingProgram/11.png)
-![Alt text](/pingProgram/15.png)
-![Alt text](/pingProgram/16.png)
-![Alt text](/pingProgram/23.png)
-![Alt text](/pingProgram/25.png)
+![Alt text](/network/packetTracer/[Etherchenel]/스위치액세스-이더채널/3.png)
+![Alt text](/network/packetTracer/[VPN]/[Site-to-Site-router]/11.png)
+![Alt text](/network/packetTracer/[VPN]/[Remote-Access-router]/busan7.png)
+![Alt text](/network/packetTracer/[tacacs]/tacacs_image.png)
 
 <hr/>
 
