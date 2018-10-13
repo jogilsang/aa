@@ -17,16 +17,15 @@ Introduce
 
 다양한 네트워크디자인 기본예제들을 패킷트레이서로 구현하고
 .pkt 파일형식으로 저장했다
+
 packetTracer 버전은 7.0 이상이여야한다
 
 Contents
 =============
 
-c언어로 win32 api를 이용한 간단한 네트워크 관련 프로그램 제작과정
-https://blog.naver.com/jogilsang/220917243301
+L3스위치에서 서로 다른 VLAN 통신하기 
+(https://blog.naver.com/jogilsang/220847929170)
 
-Dev C++ 언어 한글(Korean) 설정 및 컴파일 해보기
-https://blog.naver.com/jogilsang/220915295813
 
 
 Cotact
