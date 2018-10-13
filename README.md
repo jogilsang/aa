@@ -23,7 +23,7 @@ packetTracer 버전은 7.0 이상이여야한다
 Contents
 =============
 
-L3스위치에서 서로 다른 VLAN 통신하기 
+[L3스위치에서 서로 다른 VLAN 통신하기] 
 (https://blog.naver.com/jogilsang/220847929170)
 
 
