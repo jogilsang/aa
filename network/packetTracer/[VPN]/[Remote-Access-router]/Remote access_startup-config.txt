@@ -1,0 +1,126 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Remote-Access
+!
+!
+!
+!
+!
+ip dhcp pool LOCAL
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 172.16.0.3
+ip dhcp pool REMOTE
+ network 172.16.0.0 255.255.255.0
+ default-router 172.16.0.1
+ dns-server 172.16.0.254
+!
+!
+aaa new-model
+!
+aaa authentication login REMOTE local 
+!
+!
+aaa authorization network REMOTE local
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username japan secret 5 $1$mERr$PDTcT3JVIi6pO42.2DmKk0
+username person secret 5 $1$mERr$Fy0YO93aRvAlQd46YmO1//
+!
+!
+crypto isakmp policy 10
+ encr aes 256
+ authentication pre-share
+ group 5
+!
+!
+!
+crypto isakmp client configuration group Busan
+ key Busan
+ pool REMOTE_POOL
+ netmask 255.255.255.0
+!
+crypto ipsec security-association lifetime seconds 1800
+!
+crypto ipsec transform-set tset esp-aes esp-sha-hmac
+!
+crypto dynamic-map dmap 10
+ set transform-set tset 
+ reverse-route
+!
+crypto map cmap client authentication list REMOTE
+crypto map cmap isakmp authorization list REMOTE
+crypto map cmap client configuration address respond
+crypto map cmap 10 ipsec-isakmp dynamic dmap
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ duplex auto
+ speed auto
+ crypto map cmap
+!
+interface FastEthernet0/1
+ ip address 172.16.0.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Ethernet0/1/0
+ ip address 192.168.20.1 255.255.255.0
+ duplex auto
+ speed auto
+ crypto map cmap
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ network 172.16.0.0
+ network 192.168.10.0
+ network 192.168.20.0
+!
+ip local pool REMOTE_POOL 172.16.0.240 172.16.0.254
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+!
+!
+!
+end
+

@@ -1,0 +1,137 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname SW2
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/3
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/4
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/5
+ switchport trunk allowed vlan 101-102
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/6
+ switchport trunk allowed vlan 101-102
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/7
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/8
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/9
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/10
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/11
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/12
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/13
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/14
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/15
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/16
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/17
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/18
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/19
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/20
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/21
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/22
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/23
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/24
+ switchport trunk encapsulation dot1q
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

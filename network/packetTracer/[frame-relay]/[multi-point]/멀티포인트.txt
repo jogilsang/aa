@@ -1,0 +1,45 @@
+ no frame-relay map ip 10.0.0.2 102 broadcast
+ no frame-relay map ip 10.0.0.3 103 broadcast
+
+
+R1#conf t
+R1(config)#int s2/0
+R1(config-if)#no shutdown
+R1(config-if)#encapsulation frame-relay
+R1(config-if)#int  s0.1  multipoint
+R1(config-if)#no ip split-horizon      // 동일 네트워크 안에서 R2와 R3 라우팅 정보 교환을 위해 스플릿 호라이즌 해제
+R1(config-if)#frame-relay interface-dlci 102
+R1(config-if)#frame-relay interface-dlci 103
+R1(config-if)#int  s0.2  point-to-point
+R1(config-if)#frame-relay interface-dlci 104
+R1(config-if)#router  eigrp  100
+R1(config-router)#network  123.0.0.0
+R1(config-router)#network  14.0.0.0
+R1(config-router)#network  192.168.1.0
+R2#conf t
+R2(config)#int s2/0
+R2(config-if)#encapsulation frame-relay
+R2(config-if)#frame-relay interface-dlci 201
+R2(config-if)#frame-relay map ip 123.1.1.3  201 broadcast    //동일 네트워크에서 연결되지 않은 R2와 R3 연결
+R2(config-if)#router  eigrp  100
+R3(config-router)#network  123.0.0.0
+R3(config-router)#network  192.168.2.0
+
+R3#conf t
+R3(config)#int s2/0
+R3(config-if)#encapsulation frame-relay
+R3(config-if)#frame-relay interface-dlci 301
+R3(config-if)#frame-relay map ip 123.1.1.2 301 broadcast 
+R3(config)#router eigrp 100
+R3(config-router)#network  123.0.0.0
+R3(config-router)#network  192.168.3.0
+
+
+R4#conf t
+R4(config)#int s2/0
+R4(config-if)#encapsulation frame-relay
+R4(config-if)#frame-relay interface-dlci 401
+R4(config)-if)#router eigrp 100
+R4(config-router)#network  14.0.0.0
+R4(config-router)#network  192.168.4.0
+

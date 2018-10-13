@@ -1,0 +1,94 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.10.2 255.255.255.0
+ duplex auto
+ speed auto
+ standby 10 ip 192.168.10.100
+ standby 10 priority 200
+ standby 10 preempt
+ standby 10 track FastEthernet0/0
+ standby 10 track FastEthernet0/1
+!
+interface FastEthernet0/1
+ ip address 172.16.0.2 255.255.255.0
+ duplex auto
+ speed auto
+ standby 10 ip 172.16.0.100
+ standby 10 priority 200
+ standby 10 preempt
+ standby 0 track FastEthernet0/1
+ standby 0 track FastEthernet0/0
+!
+interface Serial0/1/0
+ ip address 10.0.0.1 255.255.255.252
+ clock rate 2000000
+!
+interface Serial0/1/1
+ no ip address
+ clock rate 2000000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router rip
+ network 10.0.0.0
+ network 172.16.0.0
+ network 192.168.10.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

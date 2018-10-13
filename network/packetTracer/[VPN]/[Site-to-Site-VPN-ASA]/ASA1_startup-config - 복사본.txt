@@ -1,0 +1,93 @@
+ASA Version 8.4(2)
+!
+hostname ASA1
+names
+!
+interface Ethernet0/0
+ switchport access vlan 2
+!
+interface Ethernet0/1
+!
+interface Ethernet0/2
+!
+interface Ethernet0/3
+!
+interface Ethernet0/4
+!
+interface Ethernet0/5
+!
+interface Ethernet0/6
+!
+interface Ethernet0/7
+!
+interface Vlan1
+ nameif inside
+ security-level 100
+ ip address 192.168.20.1 255.255.255.0
+!
+interface Vlan2
+ nameif outside
+ security-level 0
+ ip address 10.0.0.2 255.255.255.252
+!
+object network inside_subnet
+ subnet 192.168.20.0 255.255.255.0
+ description inside_subnet
+object network remote_subnet
+ subnet 192.168.10.0 255.255.255.0
+ description remote_subnet
+!
+route outside 192.168.10.0 255.255.255.0 10.0.0.1 1
+!
+access-list VPN_from_inside_to_remote extended permit icmp object inside_subnet object remote_subnet
+access-list VPN_from_inside_to_remote extended permit tcp object inside_subnet object remote_subnet
+access-list VPN_from_remote_to_inside extended permit tcp object remote_subnet object inside_subnet
+access-list VPN_from_remote_to_inside extended permit icmp object remote_subnet object inside_subnet
+!
+!
+access-group VPN_from_remote_to_inside out interface inside
+!
+!
+!
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum 512
+policy-map global_policy
+ class inspection_default
+  inspect dns preset_dns_map
+  inspect ftp 
+  inspect h323 
+  inspect http 
+  inspect icmp 
+  inspect tftp 
+!
+service-policy global_policy global
+!
+telnet timeout 5
+ssh timeout 5
+!
+!
+!
+!
+!
+crypto ipsec ikev1 transform-set tset esp-3des esp-md5-hmac
+!
+crypto map cmap 1 match address VPN_from_inside_to_remote
+crypto map cmap 1 set peer 10.0.0.1 
+crypto map cmap 1 set security-association lifetime seconds 86400
+crypto map cmap 1 set ikev1 transform-set tset 
+crypto map cmap interface outside
+crypto ikev1 enable outside
+crypto ikev1 policy 1
+ encr 3des
+ hash md5
+ group 2
+!
+tunnel-group 10.0.0.1 type ipsec-l2l
+tunnel-group 10.0.0.1 ipsec-attributes
+ ikev1 pre-shared-key jogilsang
+!

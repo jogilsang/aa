@@ -1,0 +1,19 @@
+spanning-tree link-type point-to-point
+int range fa0/3-4
+no spanning-tree guard root
+switchport mode trunk
+switchport trunk allowed vlan all
+
+
+
+
+int vlan 10
+no shut
+int vlan 20
+no shut
+
+spanning-tree mode rapid-pvst
+clock timezone KST 9
+
+spanning-tree vlan 20 priority 4096
+spanning-tree vlan 10 priority 4096

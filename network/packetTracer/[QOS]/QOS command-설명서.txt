@@ -1,0 +1,150 @@
+QoS_Router(config)#pol?
+QoS_Router(config)#policy-map ?
+  WORD  policy-map name
+  type  type of the policy-map
+QoS_Router(config)#policy-map markingpolicy
+QoS_Router(config-pmap)#?
+  class  policy criteria
+  exit   Exit from policy-map configuration mode
+  no     Negate or set default values of a command
+QoS_Router(config-pmap)#cl
+QoS_Router(config-pmap)#class ?
+  WORD           class-map name
+  class-default  System default class matching otherwise unclassified packets
+  type           type of the class-map
+QoS_Router(config-pmap)#class critical ?
+  <cr>
+QoS_Router(config-pmap)#class critical 
+QoS_Router(config-pmap-c)#?
+  bandwidth       Bandwidth
+  exit            Exit from class action configuration mode
+  no              Negate or set default values of a command
+  priority        Strict Scheduling Priority for this Class
+  queue-limit     Queue Max Threshold for Tail Drop
+  random-detect   Enable Random Early Detection as drop policy
+  service-policy  Configure Flow Next
+  set             Set QoS values
+  shape           Traffic Shaping
+QoS_Router(config-pmap-c)#b
+QoS_Router(config-pmap-c)#bandwidth ?
+  <8-2000000>  Kilo Bits per second
+  percent      % of total Bandwidth
+  remaining    percent/ratio of the remaining bandwidth
+QoS_Router(config-pmap-c)#exit
+QoS_Router(config-pmap)#exit
+QoS_Router(config)#m
+QoS_Router(config)#mac-address-table ?
+  static  Configure a static 802.1d static address
+QoS_Router(config)#m?
+mac-address-table  
+QoS_Router(config)#¤Ä¤À
+QoS_Router(config)#po
+QoS_Router(config)#po?
+policy-map  port-channel  
+QoS_Router(config)#polic
+QoS_Router(config)#policy-map ?
+  WORD  policy-map name
+  type  type of the policy-map
+QoS_Router(config)#policy-map 10
+QoS_Router(config-pmap)#?
+  class  policy criteria
+  exit   Exit from policy-map configuration mode
+  no     Negate or set default values of a command
+QoS_Router(config-pmap)#cl
+QoS_Router(config-pmap)#class ?
+  WORD           class-map name
+  class-default  System default class matching otherwise unclassified packets
+  type           type of the class-map
+QoS_Router(config-pmap)#class 10
+% class map 10 not configured
+QoS_Router(config-pmap)#class critical
+QoS_Router(config-pmap-c)#?
+  bandwidth       Bandwidth
+  exit            Exit from class action configuration mode
+  no              Negate or set default values of a command
+  priority        Strict Scheduling Priority for this Class
+  queue-limit     Queue Max Threshold for Tail Drop
+  random-detect   Enable Random Early Detection as drop policy
+  service-policy  Configure Flow Next
+  set             Set QoS values
+  shape           Traffic Shaping
+QoS_Router(config-pmap-c)#pr
+QoS_Router(config-pmap-c)#priority ?
+  <8-2000000>  Kilo Bits per second
+  percent      % of total bandwidth
+QoS_Router(config-pmap-c)#priority 100 ?
+  <32-2000000>  Burst in bytes
+  <cr>
+QoS_Router(config-pmap-c)#priority 100 300 ?
+  <cr>
+QoS_Router(config-pmap-c)#ba
+QoS_Router(config-pmap-c)#bandwidth ?
+  <8-2000000>  Kilo Bits per second
+  percent      % of total Bandwidth
+  remaining    percent/ratio of the remaining bandwidth
+QoS_Router(config-pmap-c)#bandwidth 100 ?
+  <cr>
+QoS_Router(config-pmap-c)#qu
+QoS_Router(config-pmap-c)#queue-limit ?
+  <1-4096>  Packets
+QoS_Router(config-pmap-c)#ra
+QoS_Router(config-pmap-c)#random-detect ?
+  dscp        parameters for each dscp value
+  dscp-based  Enable dscp-based WRED as drop policy
+  prec-based  Enable precedence-based WRED as drop policy
+  precedence  parameters for each precedence value
+  <cr>
+QoS_Router(config-pmap-c)#ran
+QoS_Router(config-pmap-c)#random-detect ?
+  dscp        parameters for each dscp value
+  dscp-based  Enable dscp-based WRED as drop policy
+  prec-based  Enable precedence-based WRED as drop policy
+  precedence  parameters for each precedence value
+  <cr>
+QoS_Router(config-pmap-c)#servi
+QoS_Router(config-pmap-c)#service-policy ?
+  WORD  policy-map name
+QoS_Router(config-pmap-c)#service-policy fd ?
+  <cr>
+QoS_Router(config-pmap-c)#set ?
+  ip          Set IP specific values
+  precedence  Set precedence in IP(v4) and IPv6 packets
+QoS_Router(config-pmap-c)#set ip ?
+  dscp  Set IP DSCP (DiffServ CodePointint)
+QoS_Router(config-pmap-c)#set ip ds 
+QoS_Router(config-pmap-c)#set ip ds
+QoS_Router(config-pmap-c)#set ip dscp ?
+  <0-63>   Differentiated services codepoint value
+  af11     Match packets with AF11 dscp (001010)
+  af12     Match packets with AF12 dscp (001100)
+  af13     Match packets with AF13 dscp (001110)
+  af21     Match packets with AF21 dscp (010010)
+  af22     Match packets with AF22 dscp (010100)
+  af23     Match packets with AF23 dscp (010110)
+  af31     Match packets with AF31 dscp (011010)
+  af32     Match packets with AF32 dscp (011100)
+  af33     Match packets with AF33 dscp (011110)
+  af41     Match packets with AF41 dscp (100010)
+  af42     Match packets with AF42 dscp (100100)
+  af43     Match packets with AF43 dscp (100110)
+  cs1      Match packets with CS1(precedence 1) dscp (001000)
+  cs2      Match packets with CS2(precedence 2) dscp (010000)
+  cs3      Match packets with CS3(precedence 3) dscp (011000)
+  cs4      Match packets with CS4(precedence 4) dscp (100000)
+  cs5      Match packets with CS5(precedence 5) dscp (101000)
+  cs6      Match packets with CS6(precedence 6) dscp (110000)
+  cs7      Match packets with CS7(precedence 7) dscp (111000)
+  default  Match packets with default dscp (000000)
+  ef       Match packets with EF dscp (101110)
+  <cr>
+QoS_Router(config-pmap-c)#set pre
+QoS_Router(config-pmap-c)#set precedence ?
+  <0-7>           Enter up to 4 precedence values separated by white-spaces
+  critical        Match packets with critical precedence (5)
+  flash           Match packets with flash precedence (3)
+  flash-override  Match packets with flash override precedence (4)
+  immediate       Match packets with immediate precedence (2)
+  internet        Match packets with internetwork control precedence (6)
+  network         Match packets with network control precedence (7)
+  priority        Match packets with priority precedence (1)
+  routine         Match packets with routine precedence (0)

@@ -1,0 +1,49 @@
+SW1#show span
+SW1#show spanning-tree mst 0
+
+##### MST0    vlans mapped:   1-100,103-200,203-4094
+Bridge        address 001d.462e.2600  priority      32768 (32768 sysid 0)
+Root          address 001b.5302.d200  priority      32768 (32768 sysid 0)
+              port    Gi3/0/5         path cost     200000
+Regional Root address 001c.0fd4.db00  priority      32768 (32768 sysid 0)
+                                      internal cost 200000    rem hops 19
+Operational   hello time 2 , forward delay 15, max age 20, txholdcount 6
+Configured    hello time 2 , forward delay 15, max age 20, max hops    20
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Gi3/0/5          Root FWD 200000    128.109  P2p
+Gi3/0/6          Altn BLK 200000    128.110  P2p
+
+SW1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#spa
+SW1(config)#spanning-tree ms
+SW1(config)#spanning-tree mst 0 ?
+  priority  Set the bridge priority for the spanning tree
+  root      Configure switch as root
+
+SW1(config)#spanning-tree mst 0 pro
+SW1(config)#spanning-tree mst 0 pri
+SW1(config)#spanning-tree mst 0 priority 0
+SW1(config)#do wr
+Building configuration...
+[OK]
+SW1(config)#show span
+SW1(config)#show spann
+SW1(config)#exit
+SW1#show spa
+SW1#show spanning-tree mst 0
+
+##### MST0    vlans mapped:   1-100,103-200,203-4094
+Bridge        address 001d.462e.2600  priority      0     (0 sysid 0)
+Root          this switch for the CIST
+Operational   hello time 2 , forward delay 15, max age 20, txholdcount 6
+Configured    hello time 2 , forward delay 15, max age 20, max hops    20
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Gi3/0/5          Desg FWD 200000    128.109  P2p
+Gi3/0/6          Desg BLK 200000    128.110  P2p
+
+SW1#

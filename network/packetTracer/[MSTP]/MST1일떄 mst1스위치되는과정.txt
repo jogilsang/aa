@@ -1,0 +1,12 @@
+SW2#show spanning-tree mst 1
+
+##### MST1    vlans mapped:   101-102
+Bridge        address 001c.0fd4.db00  priority      1     (0 sysid 1)
+Root          this switch for MST1
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Fa0/5            Desg FWD 200000    128.5    P2p
+Fa0/6            Desg FWD 200000    128.6    P2p
+
+SW2#

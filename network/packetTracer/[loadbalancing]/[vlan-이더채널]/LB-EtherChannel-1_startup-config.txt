@@ -1,0 +1,214 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname VLAN_LB_1
+!
+!
+!
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Port-channel 1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/1
+ description more vlan 10
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 10 port-priority 16
+!
+interface FastEthernet0/2
+ description more vlan 20
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 20 port-priority 16
+!
+interface FastEthernet0/3
+ description more vlan 30
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 30 port-priority 16
+!
+interface FastEthernet0/4
+ description more vlan 40
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 40 port-priority 16
+!
+interface FastEthernet0/5
+ description more vlan 50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+!
+interface FastEthernet0/6
+ description more vlan 60
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 60 port-priority 16
+!
+interface FastEthernet0/7
+ description more vlan 70
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 70 port-priority 16
+!
+interface FastEthernet0/8
+ description more vlan 80
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode on
+ spanning-tree vlan 80 port-priority 16
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 40
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 50
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 60
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 70
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 80
+ switchport mode access
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 00d0.ff14.9701
+ ip address 192.168.10.3 255.255.255.0
+!
+interface Vlan20
+ mac-address 00d0.ff14.9702
+ ip address 192.168.20.3 255.255.255.0
+!
+interface Vlan30
+ mac-address 00d0.ff14.9703
+ ip address 192.168.30.3 255.255.255.0
+!
+interface Vlan40
+ mac-address 00d0.ff14.9704
+ ip address 192.168.40.3 255.255.255.0
+!
+interface Vlan50
+ mac-address 00d0.ff14.9705
+ ip address 192.168.50.3 255.255.255.0
+!
+interface Vlan60
+ mac-address 00d0.ff14.9706
+ ip address 192.168.60.3 255.255.255.0
+!
+interface Vlan70
+ mac-address 00d0.ff14.9707
+ ip address 192.168.70.3 255.255.255.0
+!
+interface Vlan80
+ mac-address 00d0.ff14.9708
+ ip address 192.168.80.3 255.255.255.0
+!
+router rip
+ network 192.168.10.0
+ network 192.168.20.0
+ network 192.168.30.0
+ network 192.168.40.0
+ network 192.168.50.0
+ network 192.168.60.0
+ network 192.168.70.0
+ network 192.168.80.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

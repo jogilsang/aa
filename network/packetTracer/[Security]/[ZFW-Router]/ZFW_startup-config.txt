@@ -1,0 +1,102 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname ZFW
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+class-map type inspect match-all all-service
+ description all-service
+ match access-group name all-service
+!
+policy-map type inspect pm-in-out
+ class type inspect all-service
+  inspect
+!
+!
+!
+zone security inside
+zone security outside
+zone security dmz
+zone-pair security in-out source inside destination outside
+ service-policy type inspect pm-in-out
+zone-pair security in-dmz source inside destination dmz
+ service-policy type inspect pm-in-out
+zone-pair security dmz-out source dmz destination outside
+ service-policy type inspect pm-in-out
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ zone-member security inside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ ip address 172.16.0.1 255.255.255.0
+ zone-member security dmz
+ duplex auto
+ speed auto
+!
+interface Serial0/1/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Serial0/1/1
+ ip address 10.0.0.1 255.255.255.252
+ zone-member security outside
+ clock rate 2000000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 192.168.20.0 255.255.255.0 10.0.0.2 
+!
+ip flow-export version 9
+!
+!
+ip access-list extended all-service
+ permit ip any any
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

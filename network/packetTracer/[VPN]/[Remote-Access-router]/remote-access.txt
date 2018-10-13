@@ -1,0 +1,26 @@
+ip dhcp pool REMOTE_POOL
+network 로컬
+default-router
+default-dns
+
+
+aaa new-model
+aaa authentication login REMOTE local
+aaa authorization network REMOTE local
+
+username vpn secret supersecure
+
+crypto client configuration group REMOTE
+key cisco
+pool MYPOOL
+
+ip local pool MYPOOL 172.16.10.150 172.16.10.200
+
+group name : REMOTE
+group pw : cisco
+host ip : 인터페이스 ip
+username : vpn
+password : supersecure
+
+라우터 상에 user 정보가 등록되어야한다.
+크립토 맵에 vpn 프로그램으로 접속하고자하는 그룹과 패스워드를 정해야한다.

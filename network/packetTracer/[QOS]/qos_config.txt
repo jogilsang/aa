@@ -1,0 +1,20 @@
+
+class-map match-any VOIP_ACL
+match access-group name VOIP
+
+policy-map VOIP_20M
+class VOIP_ACL
+priority
+police rate 4000000 bps
+class class-default
+
+policy-map VOIP_20M(2)
+class class-default
+shape average 2000000
+service-policy VOIP_20M
+
+interface Gi 1/1/1
+no switchport
+service-policy output VOIP_20M(2)
+[출처] C3850 QoS설정 가능여부 (네트워크 전문가 따라잡기) |작성자 체하율
+

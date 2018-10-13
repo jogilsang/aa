@@ -1,0 +1,2 @@
+police 60000000 32768 exceed-action drop
+service-policy intput sadfasfa

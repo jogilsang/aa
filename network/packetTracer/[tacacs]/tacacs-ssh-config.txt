@@ -1,0 +1,143 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname ssh
+!
+!
+!
+enable password tacacs
+!
+!
+!
+!
+!
+aaa new-model
+!
+aaa authentication login ssh group tacacs+ 
+!
+!
+aaa authorization exec ssh group tacacs+
+!
+aaa accounting exec ssh start-stop group tacacs+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip ssh time-out 5
+ip domain-name ssh
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 192.168.1.1 255.255.255.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 22 permit host 192.168.1.254
+!
+banner motd 
+blog.naver.com/jogilsang
+
+!
+tacacs-server host 192.168.1.49 key secretssh
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ access-class 22 in
+ access-class 22 out
+ login authentication ssh
+ accounting exec ssh
+ transport input ssh
+ transport output ssh
+line vty 5 15
+ access-class 22 in
+ access-class 22 out
+ login authentication ssh
+ accounting exec ssh
+ transport input ssh
+ transport output ssh
+!
+!
+!
+end
+
