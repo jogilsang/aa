@@ -23,10 +23,10 @@ packetTracer 버전은 7.0 이상이여야한다
 Contents
 =============
 
-L3스위치에서 서로 다른 VLAN 통신하기
+1. L3스위치에서 서로 다른 VLAN 통신하기
 https://blog.naver.com/jogilsang/220847929170
 
-라우터 두대를 간단하게 연결하기
+2. 라우터 두대를 간단하게 연결하기
 https://blog.naver.com/jogilsang/220848248906
 
 L3 스위치와 L2 스위치 두대로 VLAN 구성하기
