@@ -29,7 +29,7 @@ https://blog.naver.com/jogilsang/220847929170
 2. 라우터 두대를 간단하게 연결하기
 https://blog.naver.com/jogilsang/220848248906
 
-L3 스위치와 L2 스위치 두대로 VLAN 구성하기
+1. L3 스위치와 L2 스위치 두대로 VLAN 구성하기
 https://blog.naver.com/jogilsang/220849099661
 
 ASA 방화벽 Inside, Outside 개통하기
