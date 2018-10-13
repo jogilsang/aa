@@ -7,6 +7,7 @@ Image
 ![Alt text](/network/packetTracer/[ACL]/1.png)
 ![Alt text](/network/packetTracer/[VPN]/[Site-to-Site-router]/11.png)
 ![Alt text](/network/packetTracer/[VPN]/[Remote-Access-router]/busan7.png)
+![Alt text](/network/packetTracer/[Etherchenel]/스위치액세스-이더채널/3.png)
 ![Alt text](/network/packetTracer/[tacacs]/tacacs_image.png)
 
 <hr/>
@@ -14,9 +15,9 @@ Image
 Introduce
 =============
 
-컴퓨터의 ip와 gateway, dns를 설정할수있다
-여러 ip로 ping을 날릴수있다
-그외 부가적인 기능을 수행한다
+다양한 네트워크디자인 기본예제들을 패킷트레이서로 구현하고
+.pkt 파일형식으로 저장했다
+packetTracer 버전은 7.0 이상이여야한다
 
 Contents
 =============
