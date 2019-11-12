@@ -115,7 +115,7 @@ netsh winsock reset
 http://jodies.de/ipcalc?host=12.34.16.0&mask1=23&mask2=  
 
 ### Link 
-- 
+- 서버 관련 사이트
 https://www.cherryservers.com/  
 
 Cotact
