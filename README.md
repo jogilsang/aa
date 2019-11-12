@@ -105,6 +105,18 @@ https://blog.naver.com/jogilsang/221031211754
 https://blog.naver.com/jogilsang/221033071375
 
 
+### Util 
+1. 네트워크 DNS 캐시 초기화  
+arp -d  
+ipconfig /flushdns  
+netsh winsock reset 
+
+2. 서브넷 계산기  
+http://jodies.de/ipcalc?host=12.34.16.0&mask1=23&mask2=  
+
+### Link 
+- 
+https://www.cherryservers.com/  
 
 Cotact
 =============
