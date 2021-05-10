@@ -18,86 +18,59 @@ Image
 Posting
 =============
 
-1. L3스위치에서 서로 다른 VLAN 통신하기
-https://blog.naver.com/jogilsang/220847929170
+1. [L3스위치에서 서로 다른 VLAN 통신하기](https://blog.naver.com/jogilsang/220847929170)
 
-2. 라우터 두대를 간단하게 연결하기
-https://blog.naver.com/jogilsang/220848248906
+2. [라우터 두대를 간단하게 연결하기](https://blog.naver.com/jogilsang/220848248906)
 
-1. L3 스위치와 L2 스위치 두대로 VLAN 구성하기
-https://blog.naver.com/jogilsang/220849099661
+1. [L3 스위치와 L2 스위치 두대로 VLAN 구성하기](https://blog.naver.com/jogilsang/220849099661)
 
-1. ASA 방화벽 Inside, Outside 개통하기
-https://blog.naver.com/jogilsang/220894411295
+1. [ASA 방화벽 Inside, Outside 개통하기](https://blog.naver.com/jogilsang/220894411295)
 
-1. Static-NAT 설정해서 내부 사설 IP 보호하기
-https://blog.naver.com/jogilsang/220899559068
+1. [Static-NAT 설정해서 내부 사설 IP 보호하기](https://blog.naver.com/jogilsang/220899559068)
 
-1. DNS, NAT, PAT를 이용해서 웹서버 연결하기 (80, 53 port)
-https://blog.naver.com/jogilsang/220899880906
+1. [DNS, NAT, PAT를 이용해서 웹서버 연결하기 (80, 53 port)](https://blog.naver.com/jogilsang/220899880906)
 
-1. 시스코 라우터로 ZFW 방화벽 구축하기
-https://blog.naver.com/jogilsang/220901938911
+1. [시스코 라우터로 ZFW 방화벽 구축하기](https://blog.naver.com/jogilsang/220901938911)
 
-1. Qos로 간단하게 중요도에 따라 대역폭 할당하기
-https://blog.naver.com/jogilsang/220902650155
+1. [Qos로 간단하게 중요도에 따라 대역폭 할당하기](https://blog.naver.com/jogilsang/220902650155)
 
-1. FTP,TFTP 이용해서 시스코 ASA 등 IOS 업그레이드하기
-https://blog.naver.com/jogilsang/220903245952
+1. [FTP,TFTP 이용해서 시스코 ASA 등 IOS 업그레이드하기](https://blog.naver.com/jogilsang/220903245952)
 
-1. 시스코 라우터를 이용한 Site-to-Site IPsec VPN 구현하기
-https://blog.naver.com/jogilsang/220903760933
+1. [시스코 라우터를 이용한 Site-to-Site IPsec VPN 구현하기](https://blog.naver.com/jogilsang/220903760933)
 
-1. 시스코 라우터를 이용한 Remote-Access-VPN 구현하기
-https://blog.naver.com/jogilsang/220904108085
+1. [시스코 라우터를 이용한 Remote-Access-VPN 구현하기](https://blog.naver.com/jogilsang/220904108085)
 
-1. 시스코 ASA를 이용한 SSL-Clientless VPN 구현하기
-https://blog.naver.com/jogilsang/220905920825
+1. [시스코 ASA를 이용한 SSL-Clientless VPN 구현하기](https://blog.naver.com/jogilsang/220905920825)
 
-1. 시스코 라우터 1841를 이용한 HSRP 이중화 구현
-https://blog.naver.com/jogilsang/220906240813
+1. [시스코 라우터 1841를 이용한 HSRP 이중화 구현](https://blog.naver.com/jogilsang/220906240813)
 
-1. 시스코 라우터를 이용한 GRE터널링(Tunneling) 구현
-https://blog.naver.com/jogilsang/220906805391
+1. [시스코 라우터를 이용한 GRE터널링(Tunneling) 구현](https://blog.naver.com/jogilsang/220906805391)
 	
-1. 시스코 라우터를 이용한 IPsec-GRE 터널링(Tunneling) 구현
-https://blog.naver.com/jogilsang/220907228001
+1. [시스코 라우터를 이용한 IPsec-GRE 터널링(Tunneling) 구현](https://blog.naver.com/jogilsang/220907228001)
 
-1. 시스코 스위치를 이용한 Trunk-Etherchannel(이더채널) 구현
-https://blog.naver.com/jogilsang/220908676447
+1. [시스코 스위치를 이용한 Trunk-Etherchannel(이더채널) 구현](https://blog.naver.com/jogilsang/220908676447)
 
-1. 시스코 스위치를 이용한 Accessport-Etherchannel(이더채널) 구현
-https://blog.naver.com/jogilsang/220909002150
+1. [시스코 스위치를 이용한 Accessport-Etherchannel(이더채널) 구현](https://blog.naver.com/jogilsang/220909002150)
 
-1. LACP 프로토콜 Routed and VLAN Etherchannel (L3 이더채널) 구현
-https://blog.naver.com/jogilsang/220909107026
+1. [LACP 프로토콜 Routed and VLAN Etherchannel (L3 이더채널) 구현](https://blog.naver.com/jogilsang/220909107026)
 
-1. 이더채널과 VLAN 로드벨런싱 (Etherchannel과 VLAN Loadbalancing)
-https://blog.naver.com/jogilsang/220909517353
+1. [이더채널과 VLAN 로드벨런싱 (Etherchannel과 VLAN Loadbalancing)](https://blog.naver.com/jogilsang/220909517353)
 	
-1. ACL의 한계극복, 라우터로 CBAC(Context Based Acess Control) 구현
-https://blog.naver.com/jogilsang/220910820148
+1. [ACL의 한계극복, 라우터로 CBAC(Context Based Acess Control) 구현](https://blog.naver.com/jogilsang/220910820148)
 
-1. 루핑 차단 및 빠른 복구 RSTP(Rapid Spanning tree protocol) 구현
-https://blog.naver.com/jogilsang/220911438905
+1. [루핑 차단 및 빠른 복구 RSTP(Rapid Spanning tree protocol) 구현](https://blog.naver.com/jogilsang/220911438905)
 
-1. 간단한 point-to-point 프레임 릴레이(Frame-Relay)를 통한 클라우드 연결
-https://blog.naver.com/jogilsang/220912694241
+1. [간단한 point-to-point 프레임 릴레이(Frame-Relay)를 통한 클라우드 연결](https://blog.naver.com/jogilsang/)220912694241)
 
-1. 간단한 multi-point 프레임 릴레이(Frame-Relay)를 통한 클라우드 연결
-https://blog.naver.com/jogilsang/220912966297
+1. [간단한 multi-point 프레임 릴레이(Frame-Relay)를 통한 클라우드 연결](https://blog.naver.com/jogilsang/220912966297)
 
-1. LLDP를 이용한 인접장비탐색
-https://blog.naver.com/jogilsang/220993101740
+1. [LLDP를 이용한 인접장비탐색](https://blog.naver.com/jogilsang/220993101740)
 
-1. SNMP 기반 MIB Browser을 통한 네트워크관리하기
-https://blog.naver.com/jogilsang/221027869574
+1. [SNMP 기반 MIB Browser을 통한 네트워크관리하기](https://blog.naver.com/jogilsang/221027869574)
 
-1. TACACS+와 SSH 동시에 사용해서 인증강화하기
-https://blog.naver.com/jogilsang/221031211754
+1. [TACACS+와 SSH 동시에 사용해서 인증강화하기](https://blog.naver.com/jogilsang/221031211754)
 
-1. virtual link 이용한 Area 연결 OSPF 프로토콜
-https://blog.naver.com/jogilsang/221033071375
+1. [virtual link 이용한 Area 연결 OSPF 프로토콜](https://blog.naver.com/jogilsang/221033071375)
 
 
 ### Util 
@@ -110,8 +83,7 @@ netsh winsock reset
 http://jodies.de/ipcalc?host=12.34.16.0&mask1=23&mask2=  
 
 ### Link 
-- 서버 관련 사이트
-https://www.cherryservers.com/  
+- 서버 관련 사이트(https://www.cherryservers.com/  
 
 Cotact
 =============
