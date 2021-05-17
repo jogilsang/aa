@@ -85,30 +85,6 @@ http://jodies.de/ipcalc?host=12.34.16.0&mask1=23&mask2=
 ### Link 
 - 서버 관련 사이트(https://www.cherryservers.com/  
 
-Cotact
-=============
-
-mail :
-jogilsang@naver.com
-
-kakao :
-jogilsang
-
-Instagram :
-<https://www.instagram.com/jogilsang3>
-
-Youtube :
-<https://www.youtube.com/user/mrjogilsang>
-
-more information : 
-<https://blog.naver.com/jogilsang>
-
-Donate
-=============
-Bitcoin : 351pQjDFFWW61HHKcSFQHcEMNYy4rP91ex
-
-Etherium : 0xb2470124ac43a955c36d7a21e208fae5d0d5d2e0
-
 License
 =============
 Copyright 2017 jogilsang apache license 2.0
