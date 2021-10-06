@@ -84,6 +84,8 @@ http://jodies.de/ipcalc?host=12.34.16.0&mask1=23&mask2=
 
 3. IP Calc - VLSM   
 http://www.ip-calc.com/   
+![image](https://user-images.githubusercontent.com/20831981/136127437-6650a883-7485-407c-bf14-53c7abe6cfa1.png)
+
 
 ### Link 
 - 서버 관련 사이트(https://www.cherryservers.com/  
